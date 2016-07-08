@@ -13,6 +13,7 @@ namespace SampleTest
     {
         static void Main(string[] args)
         {
+
             //IWebDriver driver = new FirefoxDriver();
             //driver.Manage().Window.Maximize();
             //driver.Navigate().GoToUrl("http://www.pampers.com");
@@ -45,10 +46,9 @@ namespace SampleTest
             driver.FindElement(By.Name("phdesktopbody_0$grs_account[addresses][0][city]")).SendKeys("Vacoas");
             driver.FindElement(By.Name("phdesktopbody_0$grs_consumer[screenname]")).SendKeys("Doushan");
             driver.FindElement(By.Name("phdesktopbody_0$grs_account[emails][0][address]")).SendKeys("tom@live.com");
-            driver.FindElement(By.Name("phdesktopbody_0$grs_account[password][password]")).SendKeys("qwertyu1");
-            driver.FindElement(By.Name("phdesktopbody_0$grs_account[password][confirm]")).SendKeys("qwertyu1");
+            driver.FindElement(By.Name("phdesktopbody_0$grs_account[password][password]")).SendKeys("qwerty11");
+            driver.FindElement(By.Name("phdesktopbody_0$grs_account[password][confirm]")).SendKeys("qwerty11");
             driver.FindElement(By.Name("phdesktopbody_0$grs_account[phones][0][fulltelephonenumber]")).SendKeys("5710152700");
-
             driver.FindElement(By.Name("phdesktopbody_0$grs_consumer[birthdate][month]")).SendKeys("03");
             driver.FindElement(By.Name("phdesktopbody_0$grs_consumer[birthdate][year]")).SendKeys("1993");
             driver.FindElement(By.Name("phdesktopbody_0$grs_account[addresses][0][territory]")).SendKeys("Hawaii");
@@ -60,12 +60,17 @@ namespace SampleTest
             //driver.FindElement(By.Id("phdesktopbody_0_submit")).Click();
 
             //driver.FindElement(By.Id("phdesktopbody_0_grs_trait[1585][18302]")).Click();
-            driver.FindElement(By.Id("phdesktopbody_0_submit")).Submit(); 
+            //driver.FindElement(By.Id("phdesktopbody_0_submit")).Submit();
+            //driver.FindElement(By.Id("phdesktopbody_0_imgmale")).Click();
             
            // driver.FindElement(By.Name("btnG")).Click();
            
             //IWebElement body = driver.FindElement(By.TagName("body"));
             //body.SendKeys("Pampers");
+
+            IWebElement element = driver.FindElement(By.Name("phdesktopbody_0$submit"));
+            element.Click();
+
             Thread.Sleep(500000);
             driver.Quit();
 
